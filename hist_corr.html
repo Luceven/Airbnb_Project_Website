@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+
+Template 2082 Pure Mix
+
+http://www.tooplate.com/view/2082-pure-mix
+
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>ANLY501 Project</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">ANLY501 Project</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                     	<ul id="nav-menu">
+                         <li><a href="index.html">Home</a></li>
+                       	 <li><a href="about.html">About</a></li>
+                       	 <!--li><a href="blog.html">Blog</a></li-->
+                       	 <!--li><a href="contact.html">Contact</a></li-->
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+           		 <div class="header-thumb">
+              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Data Exploration</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">Histograms, Correlations, and More</h3>
+           		 </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Single Project section
+================================================== -->
+<section id="single-project">
+   <div class="container">
+      <div class="row">
+
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+			<div class="project-info">
+				<h4>By</h4>
+				<p>Tuo Wu & Prerna Kaul</p>
+			</div>
+			<div class="project-info">
+				<h4>In</h4>
+				<p>Project Part 2</p>
+			</div>
+			<div class="project-info">
+				<h4>Category</h4>
+				<p>Data & Analysis</p>
+			</div>
+		</div>
+
+		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
+			<h4>Histograms and Correlations</h4>
+			<p>To figure out the smart Airbnb’s price strategy, it is important to compare Airbnb’s price with the hotel price in an area and to know when Airbnb has price advantages.  In the following graph, Airbnb’s mean price in a certain region, hotel’s minimum price and mean price in a certain region were picked as variables, since we want to learn the price distribution of Airbnb and hotels.</p>
+			<p>Compared with the hotel, Airbnb’s price concentrates more near $100 and $200. It shows that one of the reasons that customers choose Airbnb is its price advantages. When price going up, customers who can afford high price accommodations might choose a hotel, since it could provide better amenities and services.</p>
+			<img src="images/hist_corr_p1.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/hist_corr_p2.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/hist_corr_p3.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>When exploring the correlation between different variables, the number of nearby hotels, hotel’s mean price and Airbnb’s mean price were chosen as targets. From the above graph, it is shown that the hotel’s mean price has a relatively strong positive relation with Airbnb’s mean price, since their correlation coefficient is 0.59.</p>
+			<p>In addition, Airbnb’s mean price also has a strong positive relation with the number of hotels and the correlation coefficient is 0.57. At last, the hotel’s mean price and the number of hotels have relatively weak coefficient comparing with the other two pairs which is 0.37, but it is still a positive correlation between two variables. In conclusion, Airbnb mean price, hotel mean price and number of hotels have positive relationship.</p>
+
+			<br />
+
+			<h4>Additional Exploration of Correlation</h4>
+			<p><u><a href="https://plot.ly/~tuowu/225/correlationship-between-number-of-airbnb-house-restaruant-hotels-and-mean-price-/">Correlation Plot in Plotly</a></u></p>
+			<p>In this graph, we want to analyze the correlation how number of Airbnb, restaurant, hotel will affect Airbnb’s mean price. From the graph, number of Airbnb at certain area have the least correlation which is 0.11 comparing with other three variables. It indicates number of Airbnb at certain area will not affect certain area’s Airbnb mean price. Also, number of hotel and restaurant will spur the mean price of Airbnb at certain area. In addition, number of Airbnb are hardly affected by other three variables because of the low correlation coefficient.</p>
+
+			<br />
+
+			<h4>Violin Chart to Compare prices among different room types</h4>
+			<p><u><a href="https://plot.ly/~weile/50/violin-plot-for-airbnb-price/">Violin Plot in Plotly</a></u></p>
+			<p>The Violin chart that compares prices among various room types indicats the entire room apparently has higher values of quantitles than others. The similarity of violin shape between Private and Shared rooms implies that their prices density distriutions are similar.</p>
+
+			<br />
+
+			<h4>3D plot for Prices and two numeric factors</h4>
+			<p><u><a href="https://plot.ly/~weile/56/price-vs-accomodates-vs-guests-included/">3D Plot for Price in Plotly</a></u></p>
+			<p>Even though the numbers of accomodates and guest included play a part in airbnb Pricing, the 3D plot of prices show there doesn't exit a linearly relationship between prices and those factors for all kinds of room types.</p>
+		</div>
+
+      </div>
+   </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<!--ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-google-plus"></a></li>
+				</ul-->
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

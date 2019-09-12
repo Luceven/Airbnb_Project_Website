@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+
+Template 2082 Pure Mix
+
+http://www.tooplate.com/view/2082-pure-mix
+
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>ANLY501 Project</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">ANLY501 Project</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                     	<ul id="nav-menu">
+                         <li><a href="index.html">Home</a></li>
+                       	 <li><a href="about.html">About</a></li>
+                       	 <!--li><a href="blog.html">Blog</a></li-->
+                       	 <!--li><a href="contact.html">Contact</a></li-->
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+           		 <div class="header-thumb">
+              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Data Preparation</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">Data Cleaning</h3>
+           		 </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Single Project section
+================================================== -->
+<section id="single-project">
+   <div class="container">
+      <div class="row">
+
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+			<div class="project-info">
+				<h4>By</h4>
+				<p>Weile Chen</p>
+			</div>
+			<div class="project-info">
+				<h4>In</h4>
+				<p>Project Part 1</p>
+			</div>
+			<div class="project-info">
+				<h4>Category</h4>
+				<p>Data</p>
+			</div>
+		</div>
+
+		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
+			<h4>Raw Data Dimensionality</h4>
+			<p><u><a href="https://plot.ly/~weile/48/pie-chart-for-raw-data/">Pie Chart for Raw Data</a></u></p>
+
+			<br />
+
+			<p>Given that ‘NA’ and incorrect values in all datasets only account for a minor part, removing the rows that contain ‘NA’ and incorrect values will not negatively influence the final result for all three data sets. For example, in the Airbnb data set, there are more than 36,000 rows, but only 227 rows contain ‘NA’ values and 16 rows contain incorrect values. The results is shown in the following figure.</p>
+
+			<img src="images/data_clean_p1.png" class="img-responsive" alt="Single Project">
+
+			<h4>Data Issues</h4>
+			<p>One of the main issue of the Airbnb dataset is noise. There are many irrelevant information such as a description that a host puts on the page, review contents. There are also duplicated information such as market, neighborhood, host neighborhood, smart location, street, which contains very similar - sometimes the same contents.</p>
+			<p>There are also wrong listings in the scraped data such as the listing city is New York but he zip code is in California. We call this directly scraped data metadata, and in order to perform better evaluation of the data, we will do a clean for the metadata. The clean for metadata consists of dropping irrelevant text contents, and exclude the error contents such as zip codes outside New York City.</p>
+			<p>The hotel dataset is relatively simple compare to the Airbnb dataset. It only contains hotel names, zip codes, prices, addresses, country names, region and rating. For the planned analysis we need only the zip codes and hotel prices.</p>
+			<p>For Yelp data, the raw data is collecting all restaurant information base on a zip code. So, each zip code will have hundreds associated restaurants. Next step of cleaning will be grouping related data together. After counting the amount of high quality restaurants, this attribute will be assigned to corresponding Airbnb house base on the zipcode.</p>
+			<p>Also, measuring restaurant quality based only on rating also has its limitation. Scale of rating is from 1 to 5, it’s obvious not the most accurate measurement. Therefore, other influence factors, such as number of reviews or price range, might need to be considered to determine the quality of restaurants.</p>
+			<!--img src="images/portfolio-img1.jpg" class="img-responsive" alt="Single Project"-->
+
+			<br />
+
+			<h4>Data Cleaning - Preparation</h4>
+			<p>During the data cleaning process, as we mainly have numerical, boolean, and categorical data, we build a well-organized function to detect the incorrect value and ‘null’ value based on above three types of data to analyze three different datasets.</p>
+			<p>Our function, named Score_Cleanliness, will detect the ‘null’ value for each variable and check incorrect value based on different types of data, finally, it will calculate a final score. Our function will check below missing and incorrect values:</p>
+			<ul>
+			  <li><p>Counting and Reporting all NULL for our data.</p></li>
+			  <li><p>Detecting Non-integer values for a Numerical Variable: Some variables will only have integer values, the function will detect those non-integer values. e.g., the variable, “accommodates”, could not have a value like 2.3.</p></li>
+			  <li><p>Finding Non-positive values for a Numerical Variable: Some variables will only have negative values, the function will detect the negative values. e.g., the variable, “beds”, could not have a value like -3.</p></li>
+			  <li><p>Searching Incorrect values for a Boolean Variable:  After changing all uppercase of a string-type boolean variable into lowercase, the function will catch those values is not: “t”, “f”, “true”, “false”, “1”, or “0”.</p></li>
+			</ul>
+			<!--img src="images/portfolio-img1.jpg" class="img-responsive" alt="Single Project"-->
+
+			<br />
+
+			<p><u><a href="https://plot.ly/~weile/40/data-dimensionality-before-and-after-cleanedmerged/">Data Cleaning Result</a></u></p>
+
+			<p>The rest of part of data cleaning is combined with <u><a href="stats_analysis.html">basic statistical analysis</a></u> part.</p>
+		</div>
+
+      </div>
+   </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<!--ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-google-plus"></a></li>
+				</ul-->
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

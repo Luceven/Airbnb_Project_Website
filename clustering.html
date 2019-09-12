@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+
+Template 2082 Pure Mix
+
+http://www.tooplate.com/view/2082-pure-mix
+
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>ANLY501 Project</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">ANLY501 Project</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                     	<ul id="nav-menu">
+                         <li><a href="index.html">Home</a></li>
+                       	 <li><a href="about.html">About</a></li>
+                       	 <!--li><a href="blog.html">Blog</a></li-->
+                       	 <!--li><a href="contact.html">Contact</a></li-->
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+           		 <div class="header-thumb">
+              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Clustering Analysis</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">with data exploration</h3>
+           		 </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Single Project section
+================================================== -->
+<section id="single-project">
+   <div class="container">
+      <div class="row">
+
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+			<div class="project-info">
+				<h4>By</h4>
+				<p>Prerna Kaul</p>
+			</div>
+			<div class="project-info">
+				<h4>In</h4>
+				<p>Project Part 2</p>
+			</div>
+			<div class="project-info">
+				<h4>Category</h4>
+				<p>Model and Clustering</p>
+			</div>
+		</div>
+
+		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
+			<p>Before conducting the analysis, the categorical values were converted to dummy variables and then the dataset was normalized. Since there was a high dimensionality in the dataset the PCA projection of clusters was plotted.</p>
+			<p>The observations and conclusions for different clustering methods are as follows:</p>
+
+			<br />
+
+			<h4>K Means Clustering</h4>
+
+			<p>The K Means was carried out for different k values ranging from 2 to 10. The best clustering occurred when the number of clusters = 3 and the average silhouette score = 0.4188064504340923.</p>
+
+			<br />
+			
+			<img src="images/kmeans1.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/kmeans2.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/kmeans3.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<h4>Agglomerative Ward Clustering</h4>
+			<p>The agglomerative clustering was carried out for different n_clusters i.e. the number of cluster values ranging from 2 to 10. The best clustering occurred when the number of clusters = 3 and the average silhouette score was = 0.40560405413301365.</p>
+
+			<br />
+			
+			<img src="images/ward1.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/ward2.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/ward3.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<h4>DBSCAN Clustering</h4>
+			<p>The DBSCAN clustering was performed for different values of ‘eps’ i.e. the radius of a cluster, keeping the number of minimum samples same. The number of clusters was estimated using the cluster labels that were generated. It was inferenced that the best fit clustering occurred when the estimated number of clusters = 4 and the average silhouette_score for the estimated number of clusters = 0.4002130195933568.</p>
+
+			<br />
+			
+			<img src="images/dbscan1.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/dbscan2.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<h4>Conclusion</h4>
+			<p>In general, it was seen that the data was best fit into 3 or 4 clusters. Plotting the PCA projection of clusters gave a better insight into the clusters that were formed by these various methods - it was seen that for a high value of the number of clusters i.e. k, the clusters were overlapping each other and hence were not considered good clustering, even though the silhouette score was high. By seeing the clusters visually, a better and correct result was reached.</p>
+
+		</div>
+
+      </div>
+   </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<!--ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-google-plus"></a></li>
+				</ul-->
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

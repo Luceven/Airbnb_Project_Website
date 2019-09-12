@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+
+Template 2082 Pure Mix
+
+http://www.tooplate.com/view/2082-pure-mix
+
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>ANLY501 Project</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">ANLY501 Project</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                     	<ul id="nav-menu">
+                         <li><a href="index.html">Home</a></li>
+                       	 <li><a href="about.html">About</a></li>
+                       	 <!--li><a href="blog.html">Blog</a></li-->
+                       	 <!--li><a href="contact.html">Contact</a></li-->
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+           		 <div class="header-thumb">
+              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Association Rule Mining</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">find the hidden rules</h3>
+           		 </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Single Project section
+================================================== -->
+<section id="single-project">
+   <div class="container">
+      <div class="row">
+
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+			<div class="project-info">
+				<h4>By</h4>
+				<p>Lechuan Qiu</p>
+			</div>
+			<div class="project-info">
+				<h4>In</h4>
+				<p>Project Part 2</p>
+			</div>
+			<div class="project-info">
+				<h4>Category</h4>
+				<p>Exploring</p>
+			</div>
+		</div>
+
+		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
+			<h4>Association Rules Mining Analysis</h4>
+			<p>Before creating an accurate predictive model, Association Rules Mining Analysis is a very useful tool for exploring the data and looking for hidden relationships. To perform the analysis, the Apriori Algorithm was utilized. Initially, a subset of 7 variables was selected, which included Price, Property types, Number of Accommodates, number of bathrooms/bedrooms, etc.</p>
+			<p>Surprisingly, the strongest rule is between “2 beds” (Offering 2 beds for guests) and “4 Accommodates” (Available for 4 guests). “Sup” with the value “0.1002,” tells that from about 40000 listings, 10% of the hosts are offering 2 beds for 4 people. Besides this, the rest of the strong rules are all about room type. This exposes the fact that, in the dataset almost every single row has room type, and it is either “Entire house” or “Private room”.</p>
+			
+			<img src="images/asso_p1.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>This is easy to understand from the host perspective. Instead of using other terms to describe their offerings, 2 bed for 4 people is indeed a very attractive combination for traveler, since it is flexible for different type of party and different traveling purpose.</p>
+
+			<br />
+
+			<img src="images/asso_p2.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>Therefore, the variables Property type and Room type were dropped from the subset. For the new subset, three different support levels were selected: 0.25, 0.5, and 0.75. With this new subset of data, association rules relating to price range were shown in the results. The price column is binned into 5 different groups based on the value of price. “Price_1” has the lowest price range and “Price_5” has the highest price range. The following rules imply a positive relationship between the price and the house capacity i.e. a house with a larger capacity will have a higher price range.</p>
+
+			<br />
+
+			<img src="images/asso_p3.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>Also, since all the results come from the same dataset, a different “sup” value did not make a big difference on the strongest rules, such as “Price_1” and “Accommodate_1”, “Bed_2” and “Bathroom_1”, “Bed_2” and ”Bedroom_2”. The appearance of these frequent rules and patterns mostly result from the nature of houses and human behavior. Most houses have similar features and construction standards, this makes the listings show similar patterns. Also, listings’ information is edited by the hosts, so they can control the listings information to make it more attractive to guests. The rule like “Bed_2” and “Accommodate_4” is a good example of how hosts try to attract more guests</p>
+
+			<br />
+
+			<img src="images/asso_p4.png" class="img-responsive" alt="Single Project">
+
+		</div>
+
+      </div>
+   </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<!--ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-google-plus"></a></li>
+				</ul-->
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

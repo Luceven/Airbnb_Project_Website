@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+
+Template 2082 Pure Mix
+
+http://www.tooplate.com/view/2082-pure-mix
+
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>ANLY501 Project</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">ANLY501 Project</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                     	<ul id="nav-menu">
+                         <li><a href="index.html">Home</a></li>
+                       	 <li><a href="about.html">About</a></li>
+                       	 <!--li><a href="blog.html">Blog</a></li-->
+                       	 <!--li><a href="contact.html">Contact</a></li-->
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+           		 <div class="header-thumb">
+              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Predictive Models</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">with performance comparison</h3>
+           		 </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Single Project section
+================================================== -->
+<section id="single-project">
+   <div class="container">
+      <div class="row">
+
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+			<div class="project-info">
+				<h4>By</h4>
+				<p>Yunjia Zeng</p>
+			</div>
+			<div class="project-info">
+				<h4>In</h4>
+				<p>Project Part 2</p>
+			</div>
+			<div class="project-info">
+				<h4>Category</h4>
+				<p>Predictive Models</p>
+			</div>
+		</div>
+
+		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
+			<p>In this analysis, the predictive models are constructed by the five most commonly used classification methods, in order to predict the price group of Airbnb listings. The methods are Gaussian Naive Bayes, Decision Tree, K Nearest Neighbor, Support Vector Machine, and Random Forest. The classification results are in the following subsections.</p>
+
+			<br />
+
+			<h4>Preprocessing</h4>
+			<p>In order to perform the classification methods on Airbnb dataset, preprocessing has been done to the dataset for dividing it into groups. The distribution of Airbnb prices is illustrated in the following figure.</p>
+
+			<br />
+
+			<img src="images/airbnb_price_dist.png" class="img-responsive" alt="Single Project">
+
+			<p>Based on the distribution, the prices are divided into three price groups, price group 0 with label A of price range from $0 to $200, price group 1 with label B of price range from $201 to $400, and price group 2 with label C of price range from $401 to the maximum price in listings. The distribution of the classes is illustrated in the following figure after grouping the prices</p>
+
+			<br />
+
+			<img src="images/class_distribution.jpg" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<h4>Decision Tree Predictive Model</h4>
+			<p>The performance of Decision Tree classifier to the Airbnb data is fairly good, with an accuracy score of 0.8849. By the classification report in the following figure, Decision Tree classifier classifies all three classes good and performs excellently on classifying class 2, with corresponding label C.</p>
+			
+			<br />
+
+			<img src="images/confusion-matrixDecission Tree.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/decission_tree_roc.png" class="img-responsive" alt="Single Project">
+
+			<h4>K Nearest Neighbor Predictive Model</h4>
+			<p>KNN classifier performs well on Airbnb dataset, with an accuracy score of 0.8742. From the classification report in the figure below, it can be seen that the KNN classifier predicts good results for class 2, which is the price group C, with a 0.91 accuracy.</p>
+
+			<br />
+
+			<img src="images/confusion-matrixKNN.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/KNN_roc.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>To the unknown records, KNN classifier works in a relatively expensive manner. Comparing with all five classification methods that were used, KNN classifier performs good but is relatively time consuming. The accuracy of KNN is a little bitter lower than Decision Tree, but much higher than the Support Vector Machine classifier in the next subsection.</p>
+
+			<br />
+
+			<h4>Support Vector Machine Predictive Model</h4>
+			<p>The SVM classifier performs ordinary on the Airbnb dataset, with an accuracy score of 0.7290. SVM classifies class 0 relatively good compare to class 1 and class 2. The results are illustrated in the following figure.</p>
+
+			<br />
+
+			<img src="images/confusion-matrixSVM.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/svm_roc.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>SVM works effectively in high dimensional spaces, especially when the dimension is greater than the number of samples. But if the features are far greater than samples, it performs poorly. Since SVM has no probability estimates, the probability must be computed using at least 5-fold cross-validation. This makes the training for SVM predictive model on Airbnb dataset extremely time consuming, and is far slower than all the other methods that are used.</p>
+
+			<br />
+
+			<h4>Naive Bayes Predictive Model</h4>
+			<p>The performance of the Gaussian Naive Bayes classifier on Airbnb price dataset is disappointing, with an accuracy score of 0.3524. From the classification report in the figure below it can be seen, Gaussian Naive Bayes successfully classifies class 0, which is the lower price range group in Airbnb dataset, with 0.81 precision; it poorly classifies class 1 and class 2, which are two higher price range Airbnb listings, with only 0.56 and 0.34 precisions.</p>
+
+			<br />
+
+			<img src="images/confusion-matrixNaive Bayes.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/naive_bayes_roc.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<h4>Random Forest Predictive Model</h4>
+			<p>Random forest classifier performs the best on Airbnb dataset. The result is illustrated in the figure below.</p>
+
+			<br />
+
+			<img src="images/rf_result.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>The Random Forest classifier grows multiple trees based on training data. It classifies a new record by offering a classification from each tree, then output the results based on the majority classification. Recall the Decision Tree methods, Random Forest creates a forest of decision trees and each of them votes on the classification, and the output of each testing sample is the class that wins most of the votes. Similar to SVM, Random Forest can handle large datasets with high dimensionality, but with much better training and testing time. It uses bootstrap sampling, also known as bagging, to the training data, which selected the whole training set with replacement. By averaging the various sub-samples of the training set, Random Forest improves the predictive accuracy and controls overfitting problem. Bagging reduces variance and it is very efficient with strong learner systems with low bias.</p>
+
+			<br />
+
+			<img src="images/confusion-matrixRandom Forest.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<img src="images/random_forest_roc.png" class="img-responsive" alt="Single Project">
+
+			<br />
+
+			<p>While training the predictive model, Random Forest classifier computes the feature importance scores for all features. The results in the following figure illustrate the most important features that contribute to the classification results. The room type of a listing mainly dominates the price, even more important than the hotel prices around in the same area. Another interesting important feature is accommodates, since it implies the area of a listing. By selecting important features, there can be simpler predictive model that performance the same but with less expensive training cost. The full table of feature importance and thresholds of accuracy are stored for possible further exploration in later part of this project.</p>
+
+			<br />
+
+			<img src="images/freature_importance_rf.png" class="img-responsive" alt="Single Project">
+
+		</div>
+
+      </div>
+   </div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<!--ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-google-plus"></a></li>
+				</ul-->
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
